@@ -168,29 +168,30 @@ footer {
 ----------------------------------------------------------*/
 #login {
     display: block;
-    font-size: .85em;
+    font-size: 1.2em;
     margin: -15px 0 40px 0px;
     text-align: right;
+    color: #c8c8c8;
 }
 
-    #login a {
+    #login a
+    {
         background-color: #d3dce0;
         margin-left: 10px;
         margin-right: 3px;
         padding: 3px 10px;
         text-decoration: none;
-        border-radius: 5px;
         -moz-border-radius: 5px;
         -webkit-border-radius: 5px;
-        font-size: 13px;
-        text-transform: uppercase;
+        border-radius: 5px;
     }
 
     #login a.username {
+        color: #c8c8c8;
         background: none;
         margin: 0;
         padding: 0;
-        text-decoration: underline;
+        font-weight: bold;
     }
 
     #login ul {
@@ -349,7 +350,6 @@ input, textarea {
 
 textarea {
     font-family: inherit;
-    width: 500px;
 }
 
     input:focus, textarea:focus {
@@ -443,6 +443,7 @@ input[type="checkbox"].input-validation-error {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+    width: 100%;
     margin-top: 0.75em;
     border: 0 none;
     font-size: 14px;
@@ -671,32 +672,22 @@ tr.pager td {
 
 /* form
 ----------------------------------------------------------*/
-form span {
-    display: block;
+
+
+form textarea {
+    min-height: 120px;
 }
-form span label {
-    width: 300px;
-    font-size: 20px;
-    display: inline-block;
-    padding: 10px;
-    vertical-align: top;
-}
-    form span label + input,
-    form span label + textarea {
-        width: 500px;
-        padding: 10px;
-        font-family: helvetica;
-    }
 form .form-actions {
     display:  block;
     text-align: right;
 }
-input[type="submit"] {
+input[type="submit"]
+{
     background: #fff;
     border: 1px solid #E2E2E2;
-    border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
+    border-radius: 5px;
     color: #000;
     cursor: pointer;
     float: right;
@@ -714,9 +705,6 @@ input[type="submit"] {
 
 /* admin panel table
 ----------------------------------------------------------*/
-table {
-    width: 100%;
-}
 table td,
 table th {
     padding: 20px;
@@ -729,3 +717,21 @@ table td .delete-action {
     font-size: 0px;
     display: inline-block;
 }
+
+/* index
+----------------------------------------------------------*/
+.generalHeader {
+    font-size: 35px;
+    text-align: center;
+    color: #414141;
+}
+.main-content-left {
+    width: 50%;
+    float: left;
+}
+.main-content-right {
+    overflow: hidden;
+}
+    .main-content-right img {
+        max-width: 100%;
+    }

@@ -17,9 +17,9 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
-    <IISExpressUseClassicPipelineMode />
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -205,6 +205,7 @@
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Images\bg-delete.png" />
     <Content Include="Images\footer-stripes.png" />
+    <Content Include="Images\future-machine.png" />
     <Content Include="Images\goyello.png" />
     <Content Include="Images\read-more-bg-orange.png" />
     <Content Include="Scripts\jquery-1.8.2.js" />

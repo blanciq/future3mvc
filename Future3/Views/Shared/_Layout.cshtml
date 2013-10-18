@@ -21,7 +21,10 @@
                     <nav>
                         <ul id="menu">
                             <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li>@Html.ActionLink("Admin", "Admin", "Home")</li>
+                            @if (Request.IsAuthenticated && User.IsInRole("Admin"))
+                            {
+                                <li>@Html.ActionLink("Admin", "Admin", "Home")</li>
+                            }
                         </ul>
                     </nav>
                 </div>
