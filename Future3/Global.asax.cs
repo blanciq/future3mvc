@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Configuration;
+using System.Threading;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Future3.Services;
 
 namespace Future3
 {
@@ -22,6 +21,13 @@ namespace Future3
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            var shouldRun = ConfigurationManager.AppSettings["run-service"];
+            if (shouldRun != null && shouldRun.ToLower() == "true")
+            {
+                var service = new TimeMachineService();
+                ThreadPool.QueueUserWorkItem(x => service.Run());
+            }
         }
     }
 }
